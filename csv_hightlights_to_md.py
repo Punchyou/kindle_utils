@@ -1,0 +1,1 @@
+import pandas as pddef main():    df = pd.read_csv('I Want to Age Like That! Third Edition_ Healthy Aging Through Midlife and Menopause-Notebook.csv', index_col=False)    notes = df.dropna(subset=['Unnamed: 3'])['Unnamed: 3'].apply(lambda x: f"* {x}")    notes.to_markdown(buf='highlights.md', tablefmt="plain", index=False)    passif __name__=="__main__":    main()
